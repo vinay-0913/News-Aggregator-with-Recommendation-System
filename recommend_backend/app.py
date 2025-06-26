@@ -4,6 +4,7 @@ import requests
 import numpy as np
 import nltk
 import os
+import traceback
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -133,8 +134,9 @@ def recommend():
         return jsonify({"articles": recommended_articles})
 
     except Exception as e:
-        print("🚨 Error in /recommend:", str(e))
-        return jsonify({"error": "Internal server error"}), 500
+    print("🚨 Error in /recommend:", str(e))
+    traceback.print_exc()  
+    return jsonify({"error": "Internal server error"}), 500
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
