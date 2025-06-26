@@ -62,7 +62,7 @@ function AllNews({ onRecommendationsUpdate }) {
     console.log("🔵 Sending payload:", payload);
 
     try {
-      const response = await axios.post("https://news-aggregator-recommend.onrender.com/recommendations", payload);
+      const response = await axios.post("https://news-aggregator-recommend.onrender.com", payload);
       const newRecommendations = response.data?.articles || [];
 
       onRecommendationsUpdate((prevRecommendations) => {
