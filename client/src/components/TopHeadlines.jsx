@@ -62,7 +62,7 @@ function TopHeadlines({ onRecommendationsUpdate }) {
     };
 
     try {
-      const response = await axios.post("https://news-aggregator-recommendations.onrender.com", payload);
+      const response = await axios.post("https://news-aggregator-recommendations.onrender.com/recommendations", payload);
       const newRecommendations = response.data?.articles || [];
 
       onRecommendationsUpdate((prevRecommendations) => {
