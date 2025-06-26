@@ -3,16 +3,22 @@ from flask_cors import CORS
 import requests
 import numpy as np
 import nltk
+import os
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Download necessary NLTK data
-nltk.download("punkt")
-nltk.download("stopwords")
-nltk.download("wordnet")
+# Setup NLTK download path and check if corpora already exist
+nltk_data_path = "/opt/render/nltk_data"
+nltk.data.path.append(nltk_data_path)
+
+for pkg in ["punkt", "stopwords", "wordnet"]:
+    try:
+        nltk.data.find(f"{'corpora' if pkg != 'punkt' else 'tokenizers'}/{pkg}")
+    except LookupError:
+        nltk.download(pkg, download_dir=nltk_data_path)
 
 app = Flask(__name__)
 CORS(app)
@@ -131,4 +137,5 @@ def recommend():
         return jsonify({"error": "Internal server error"}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)
