@@ -37,7 +37,7 @@ async function makeApiRequest(url) {
 }
 
 // ✅ Fetch latest news articles sorted by `publishedAt`
-app.get("/all-news", async (req, res) => {
+app.get("/", async (req, res) => {
   let pageSize = parseInt(req.query.pageSize) || 80;
   let page = parseInt(req.query.page) || 1;
   let q = req.query.q || "world";
