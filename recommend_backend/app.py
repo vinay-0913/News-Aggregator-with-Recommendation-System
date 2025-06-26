@@ -11,16 +11,19 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-nltk_data_path = "/tmp/nltk_data"  
-nltk.data.path.append(nltk_data_path)
+# ✅ Set download path
+nltk_data_path = "/tmp/nltk_data"
+os.makedirs(nltk_data_path, exist_ok=True)
 
+# ✅ Force NLTK to look ONLY here
+nltk.data.path = [nltk_data_path]
+
+# ✅ Download required packages if missing
 for pkg in ["punkt", "stopwords", "wordnet"]:
     try:
         nltk.data.find(f"{'corpora' if pkg != 'punkt' else 'tokenizers'}/{pkg}")
     except LookupError:
         nltk.download(pkg, download_dir=nltk_data_path)
-
-
 app = Flask(__name__)
 CORS(app)
 
