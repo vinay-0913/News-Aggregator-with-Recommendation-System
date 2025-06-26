@@ -90,6 +90,7 @@ def recommend():
     """Provide news recommendations based on article similarity."""
     try:
         data = request.get_json()
+        print("🔵 Received payload:", data)
         
         if not data or "title" not in data:
             return jsonify({"error": "Valid title is required"}), 400
