@@ -134,9 +134,9 @@ def recommend():
         return jsonify({"articles": recommended_articles})
 
     except Exception as e:
-    print("🚨 Error in /recommend:", str(e))
-    traceback.print_exc()  
-    return jsonify({"error": "Internal server error"}), 500
+        print("🚨 Error in /recommendations:", str(e))
+        traceback.print_exc()  
+        return jsonify({"error": "Internal server error"}), 500
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
