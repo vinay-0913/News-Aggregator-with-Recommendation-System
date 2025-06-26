@@ -11,8 +11,7 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Setup NLTK download path and check if corpora already exist
-nltk_data_path = "/opt/render/nltk_data"
+nltk_data_path = "/tmp/nltk_data"  
 nltk.data.path.append(nltk_data_path)
 
 for pkg in ["punkt", "stopwords", "wordnet"]:
@@ -20,6 +19,7 @@ for pkg in ["punkt", "stopwords", "wordnet"]:
         nltk.data.find(f"{'corpora' if pkg != 'punkt' else 'tokenizers'}/{pkg}")
     except LookupError:
         nltk.download(pkg, download_dir=nltk_data_path)
+
 
 app = Flask(__name__)
 CORS(app)
