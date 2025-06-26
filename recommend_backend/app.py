@@ -71,7 +71,7 @@ def fetch_top_headlines(category="general", max_results=20):
         print(f"❌ Failed to fetch top headlines: {response.status_code}")
         return []
 
-@app.route("/allnews", methods=["GET"])
+@app.route("/", methods=["GET"])
 def all_news():
     """Fetch and return latest news articles dynamically."""
     articles = fetch_news()
@@ -84,7 +84,7 @@ def top_headlines():
     articles = fetch_top_headlines(category)
     return jsonify({"articles": articles})
 
-@app.route("/recommend", methods=["POST"])
+@app.route("/recommendations", methods=["POST"])
 def recommend():
     """Provide news recommendations based on article similarity."""
     try:
