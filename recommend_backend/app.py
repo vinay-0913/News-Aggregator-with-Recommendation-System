@@ -10,20 +10,19 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from nltk.tokenize import TreebankWordTokenizer
 
-# ✅ Set download path
 nltk_data_path = "/tmp/nltk_data"
 os.makedirs(nltk_data_path, exist_ok=True)
-
-# ✅ Force NLTK to look ONLY here
 nltk.data.path = [nltk_data_path]
 
-# ✅ Download required packages if missing
+# ✅ Download all required packages
 for pkg in ["punkt", "stopwords", "wordnet"]:
     try:
         nltk.data.find(f"{'corpora' if pkg != 'punkt' else 'tokenizers'}/{pkg}")
     except LookupError:
         nltk.download(pkg, download_dir=nltk_data_path)
+        
 app = Flask(__name__)
 CORS(app)
 
@@ -36,7 +35,8 @@ stop_words = set(stopwords.words("english"))
 
 def preprocess_text(text):
     """Tokenize, remove stopwords, and lemmatize text."""
-    words = word_tokenize(text.lower())
+    tokenizer = TreebankWordTokenizer()
+    words = tokenizer.tokenize(text.lower())
     words = [lemmatizer.lemmatize(word) for word in words if word.isalnum() and word not in stop_words]
     return " ".join(words)
 
