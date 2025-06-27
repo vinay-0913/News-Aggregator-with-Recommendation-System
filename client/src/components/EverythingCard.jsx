@@ -76,7 +76,7 @@ function Card(props) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleArticleClick}
-          className="title text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-all line-clamp-2 min-h-[3rem]"
+          className="title text-lg font-semibold text-gray-900 transition-all line-clamp-2 min-h-[3rem]"
         >
           {props.title}
         </a>
@@ -88,7 +88,7 @@ function Card(props) {
         {/* Read More below description */}
         <div className="mt-2">
         <a href={props.url} target="_blank" rel="noopener noreferrer" 
-          className="flex items-center gap-1 text-blue-600 hover:underline transition-all duration-500 ease-in-out">
+          className="flex items-center gap-1 hover:underline transition-all duration-500 ease-in-out">
           Read More 
           <ArrowUpRight className="w-4 h-4 transition-transform duration-300 ease-in-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
         </a>
