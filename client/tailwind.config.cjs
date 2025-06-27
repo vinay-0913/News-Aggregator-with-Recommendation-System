@@ -29,5 +29,5 @@ module.exports = {
       lightBgSecondary : "#0F172A",
     }
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 }
