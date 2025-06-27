@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+aaaaimport React, { useState } from "react";
 import { Calendar, ArrowUpRight } from "lucide-react";
 import { format } from "date-fns";
 
@@ -56,7 +56,7 @@ function Card(props) {
 
   {/* Source Badge */}
   {props.source && (
-    <div className="absolute top-2 left-2 bg-white text-black text-xs font-semibold px-3 py-1 rounded-md shadow-lg bg-opacity-95">
+    <div className="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-lg ">
       {props.source}
     </div>
   )}
