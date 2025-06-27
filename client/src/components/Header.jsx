@@ -25,8 +25,8 @@ function Header() {
   return (
     <header>
       <nav className="fixed top-0 left-0 w-full h-auto bg-gray-800 z-10 flex items-center justify-around">
-        <h3 className="title relative heading font-bold md:basis-1/6 text-2xl xs:basis-4/12 z-50 mb-5 mt-5">
-           <Link className="no-underline font-semibold" to="/" onClick={() => setActive(false)}>News Aggregator</Link>
+        <h3 className="relative heading font-bold md:basis-1/6 text-2xl xs:basis-4/12 z-50 mb-5 mt-5">
+           <Link className="title no-underline font-semibold" to="/" onClick={() => setActive(false)}>News Aggregator</Link>
         </h3>
         
         <ul className={`nav-ul flex gap-11 md:gap-14 xs:gap-12 lg:basis-3/6 md:basis-4/6 md:justify-end ${active ? "active" : ""}`}>
