@@ -26,7 +26,7 @@ function Card(props) {
   const placeholderImage = "/placeholder.svg";
 
   return (
-    <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all mt-10 transform hover:-translate-y-0.5 hover:shadow-lg">
+    <div className="group bg-white h-full flex-1 flex-col rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all transform hover:-translate-y-0.5 hover:shadow-lg">
       {/* Image Section */}
       <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
         {props.imgUrl && !imageError ? (
@@ -69,7 +69,7 @@ function Card(props) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleArticleClick}
-          className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-all"
+          className="title text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-all line-clamp-2 min-h-[3rem]"
         >
           {props.title}
         </a>
@@ -79,7 +79,7 @@ function Card(props) {
         </p>
 
         {/* Read More below description */}
-        <div className="mt-4">
+        <div className="mt-2">
         <a href={props.url} target="_blank" rel="noopener noreferrer" 
           className="flex items-center gap-1 text-blue-600 hover:underline transition-all duration-500 ease-in-out">
           Read More 
