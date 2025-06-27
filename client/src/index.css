@@ -270,12 +270,6 @@ ul li ul li a:hover {
     border-radius: 10px;
 }
 
-.title {
-    font-family: "Freeman", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-}
-
 footer {
     color: var(--btn-color);
     background: var(--heading);
