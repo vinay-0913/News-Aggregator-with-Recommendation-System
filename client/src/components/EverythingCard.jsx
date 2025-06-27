@@ -28,33 +28,40 @@ function Card(props) {
   return (
     <div className="group bg-white h-full flex-1 flex-col rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all transform hover:-translate-y-0.5 hover:shadow-lg">
       {/* Image Section */}
-      <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+      <a
+      href={props.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={handleArticleClick}
+      className="relative aspect-[16/9] overflow-hidden bg-gray-100 block"
+      >
         {props.imgUrl && !imageError ? (
-          <>
-            {!imageLoaded && <div className="absolute inset-0 bg-gray-200 shimmer" />}
-            <img
-              src={props.imgUrl}
-              alt={props.title}
-              className={`w-full h-full object-cover transition-all duration-500 ${
-                imageLoaded ? "opacity-100" : "opacity-0"
-              } group-hover:scale-105`}
-              onLoad={() => setImageLoaded(true)}
-              onError={() => setImageError(true)}
-            />
-          </>
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gray-100">
-            <img src={placeholderImage} alt="No image available" className="w-16 h-16 opacity-30" />
-          </div>
-        )}
+      <>
+      {!imageLoaded && <div className="absolute inset-0 bg-gray-200 shimmer" />}
+      <img
+        src={props.imgUrl}
+        alt={props.title}
+        className={`w-full h-full object-cover transition-all duration-500 ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        } group-hover:scale-105`}
+        onLoad={() => setImageLoaded(true)}
+        onError={() => setImageError(true)}
+      />
+      </>
+    ) : (
+    <div className="w-full h-full flex items-center justify-center bg-gray-100">
+      <img src={placeholderImage} alt="No image available" className="w-16 h-16 opacity-30" />
+    </div>
+  )}
 
-        {/* Source Badge */}
-        {props.source && (
-          <div className="absolute top-2 left-2 bg-white text-black text-xs font-semibold px-3 py-1 rounded-md shadow-lg bg-opacity-95">
-            {props.source}
-          </div>
-        )}
-      </div>
+  {/* Source Badge */}
+  {props.source && (
+    <div className="absolute top-2 left-2 bg-white text-black text-xs font-semibold px-3 py-1 rounded-md shadow-lg bg-opacity-95">
+      {props.source}
+    </div>
+  )}
+</a>
+
 
       {/* Content Section */}
       <div className="p-4">
