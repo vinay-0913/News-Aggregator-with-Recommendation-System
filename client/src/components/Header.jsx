@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <header>
-      <nav className="fixed top-0 left-0 w-full h-auto bg-gray-800 z-10 flex items-center justify-around">
+      <nav className="fixed top-0 left-0 w-full h-auto z-10 flex items-center justify-around">
         <h3 className="relative heading font-bold md:basis-1/6 text-2xl xs:basis-4/12 z-50 mb-5 mt-5">
            <Link className="title no-underline font-semibold" to="/" onClick={() => setActive(false)}>News Aggregator</Link>
         </h3>
