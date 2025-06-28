@@ -107,9 +107,9 @@ function TopHeadlines({ onRecommendationsUpdate }) {
       </div>
       {!isLoading && data.length > 0 && (
         <div className="pagination flex justify-center gap-14 my-10 items-center">
-          <button disabled={page <= 1} className='pagination-btn' onClick={handlePrev}>Prev</button>
+          <button disabled={page <= 1} className='pagination-btn cursor-pointer hover:bg-blue-600' onClick={handlePrev}>Prev</button>
           <p className='font-semibold opacity-80'>{page} of {Math.ceil(totalResults / pageSize)}</p>
-          <button className='pagination-btn' disabled={page >= Math.ceil(totalResults / pageSize)} onClick={handleNext}>Next</button>
+          <button className='pagination-btn hover:bg-blue-600' disabled={page >= Math.ceil(totalResults / pageSize)} onClick={handleNext}>Next</button>
         </div>
       )}
     </>
