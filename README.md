@@ -35,22 +35,26 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
     ```bash
     pip install -r requirements.txt
     ```
-3. **Set API KEY **:    
-    Add your NewsAPI.org API key to the `.env` file in the following format: `API_KEY=your_news_api_key`.
-5. In the client directory, run `npm install` to install the necessary dependencies.
-6. In the server directory, create python virtual environment by running `python -m venv venv` and then run `.venv\Scripts\activate` to activate (.venv). And then run `python app.py`.
-7. Navigate to the client directory and run `npm install` to install the necessary dependencies.
-8. Start the client by running `npm run dev`.
-Make sure you replace with your API key. So when clicking news articles in AllNews section and Top-Headlines section, related news artilces are shown in Recommendation section (If not, relvent new are not found).
+3. **Set API KEY**:    
+   -Add your NewsAPI.org API key in the following format: `API_KEY=your_news_api_key`.
 
-### Note - Currently NewsAPI.org only support `us` country news. So in Country Section, other country news are not returning any news articles. 
+4. **To run on local machine**:
+   -Change my deployed urls to :
+    - ***For client*** : http://localhost:5173
+    - ***For recommen_backend*** : http://127.0.0.1:5000/recommendations
+    - 
+5. **Start the development server**:
+   - Run the recommend_backend server:
+    ```bash
+    python app.py
+    ```
+    - Run the backend server:
+    ```bash
+    node server.js
+    ```
+   - Run the frontend React application:
+    ```bash
+    npm run dev
+    ```
 
-## Usage
-
-Once the project is set up and running, you can view news articles from various sources on the client side.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+### Note - Currently NewsAPI.org only support `us` country news. So in Country Section, other country news are not returning any news articles. You can also your other APIs instead. 
