@@ -56,7 +56,8 @@ function AllNews({ onRecommendationsUpdate }) {
 
     const payload = {
       title: article.title.trim(),
-      description: article.description || "" // Include description if available
+      description: article.description || "", 
+      clicked_urls: [article.url]
     };
 
     console.log("🔵 Sending payload:", payload);
