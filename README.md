@@ -8,7 +8,7 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
 
 ## 🚀 Live Demo
 
-Check out the live demo of the application [here](https://full-stack-ecommerce-gray.vercel.app/).
+Check out the live demo of the application [here](https://news-aggregator-0lpm.onrender.com).
 
 ## Tech Stack 
 
