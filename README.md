@@ -57,4 +57,4 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
     npm run dev
     ```
 
-### Note - Currently NewsAPI.org only support `us` country news. So in Country Section, other country news are not returning any news articles. You can also your other APIs instead. 
+#### Note - Currently NewsAPI.org only support `us` country news. So in Country Section, other country news are not returning any news articles. You can also use other APIs instead. 
