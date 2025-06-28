@@ -36,13 +36,13 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
     pip install -r requirements.txt
     ```
 3. **Set API KEY**:    
-   -Add your NewsAPI.org API key in the following format: `API_KEY=your_news_api_key`.
+   - Add your NewsAPI.org API key in the following format: `API_KEY=your_news_api_key`.
 
 4. **To run on local machine**:
-   -Change my deployed urls to :
+   - Change my deployed urls to :
     - ***For client*** : http://localhost:5173
     - ***For recommen_backend*** : http://127.0.0.1:5000/recommendations
-    - 
+      
 5. **Start the development server**:
    - Run the recommend_backend server:
     ```bash
