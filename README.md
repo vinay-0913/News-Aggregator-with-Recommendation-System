@@ -2,7 +2,9 @@
 
 This is a **News Aggregator** project built using the **Express, React, Node.js**, **Flask** and **NewsAPI.org API**. The project allows users to view news articles from various sources at one place. They can view default news, Category news, Country News. This project also has Recommendation System which recommend news articles based on your interaction. 
 
-## Tech Stack
+![Website Screenshot](./clinet/public/Screenshot.png)
+
+## Tech Stack 
 
 - **Frontend**: React.js with modern hooks and context for state management.
 - **Backend**: Node.js, Express.js and Flask fro recommendation system.
