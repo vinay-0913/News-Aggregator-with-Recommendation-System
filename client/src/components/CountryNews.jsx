@@ -77,7 +77,7 @@ function CountryNews() {
         <div className="pagination flex justify-center gap-14 my-10 items-center">
           <button
             disabled={page <= 1}
-            className="pagination-btn"
+            className="pagination-btn cursor-pointer hover:bg-blue-600"
             onClick={handlePrev}
           >
             Prev
@@ -87,7 +87,7 @@ function CountryNews() {
           </p>
           <button
             disabled={page >= Math.ceil(totalResults / pageSize)}
-            className="pagination-btn"
+            className="pagination-btn hover:bg-blue-600"
             onClick={handleNext}
           >
             Next
