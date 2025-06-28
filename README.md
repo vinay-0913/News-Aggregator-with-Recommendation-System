@@ -4,6 +4,10 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
 
 ![Website Screenshot](./client/public/Screenshot.png)
 
+## 🚀 Live Demo
+
+Check out the live demo of the application [here](https://news-aggregator-0lpm.onrender.com).
+
 ## Tech Stack 
 
 - **Frontend**: React.js with modern hooks and context for state management.
