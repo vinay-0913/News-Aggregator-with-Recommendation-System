@@ -8,7 +8,7 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
 
 ## 🚀 Live Demo
 
-Check out the live demo of the application [here](https://news-aggregator-0lpm.onrender.com).
+Check out the live demo of the application [here](https://full-stack-ecommerce-gray.vercel.app/).
 
 ## Tech Stack 
 
@@ -28,7 +28,7 @@ Check out the live demo of the application [here](https://news-aggregator-0lpm.o
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/rehmanNRY/SocialMediaApp
+    git clone https://github.com/vinay-0913/News-Aggregator-with-Recommendation-System.git
     ```
 2. **Install dependencies**:
    - Navigate to the client directory and run:
