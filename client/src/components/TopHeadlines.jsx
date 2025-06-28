@@ -59,6 +59,7 @@ function TopHeadlines({ onRecommendationsUpdate }) {
     const payload = {
       title: article.title.trim(),
       description: article.description || "",
+      clicked_urls: [article.url]
     };
 
     try {
