@@ -35,7 +35,8 @@ This is a **News Aggregator** project built using the **Express, React, Node.js*
     ```bash
     pip install -r requirements.txt
     ```
-4. Add your NewsAPI.org API key to the `.env` file in the following format: `API_KEY=your_news_api_key`.
+3. **Set API KEY **:    
+    Add your NewsAPI.org API key to the `.env` file in the following format: `API_KEY=your_news_api_key`.
 5. In the client directory, run `npm install` to install the necessary dependencies.
 6. In the server directory, create python virtual environment by running `python -m venv venv` and then run `.venv\Scripts\activate` to activate (.venv). And then run `python app.py`.
 7. Navigate to the client directory and run `npm install` to install the necessary dependencies.
