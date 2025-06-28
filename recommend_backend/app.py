@@ -16,7 +16,6 @@ nltk_data_path = "/tmp/nltk_data"
 os.makedirs(nltk_data_path, exist_ok=True)
 nltk.data.path = [nltk_data_path]
 
-# ✅ Download all required packages
 for pkg in ["punkt", "stopwords", "wordnet"]:
     try:
         nltk.data.find(f"{'corpora' if pkg != 'punkt' else 'tokenizers'}/{pkg}")
@@ -130,7 +129,9 @@ def recommend():
         for i in np.argsort(similarity_scores)[::-1]:
             if similarity_scores[i] > 0.2:
                 article = list(article_texts.values())[i]
-                if article["title"] != clicked_title:
+                if (article["title"].strip().lower() != clicked_title.strip().lower()
+                    and article["url"].strip() not in data.get("clicked_urls", [])
+                    ):
                     recommended_articles.append(article)
             if len(recommended_articles) >= 3:
                 break
